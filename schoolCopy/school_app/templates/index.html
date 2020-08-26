@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+{% load staticfiles %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>School</title>
+  <link rel="stylesheet" href={% static "css/font-awesome.min.css" %}>
+  <link rel="stylesheet" href={% static "css/bootstrap.css" %}>
+  <link rel="stylesheet" href={% static "css/style.css" %}>
+
+  <!-- Favicons -->
+  <link href={% static "img/favicon.png" %} rel="icon">
+  <link href={% static "img/apple-touch-icon.png"} rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  
+
+  <!-- Libraries CSS Files -->
+  <link href={% static "lib/font-awesome/css/font-awesome.min.css" %} rel="stylesheet">
+  <link href={% static "lib/animate/animate.min.css" %} rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href={% static "css/style.css" %} rel="stylesheet">
+
+</head>
+<body id="home">
+  <nav class="navbar navbar-expand-md navbar-light py-4 fixed-top">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="{% static 'img/logo.png' %}" width="50" height="50" alt=""><h3 class="d-inline align-middle">MLRPS</h3>
+
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                 <a href="#home" class="nav-link">HOME</a>
+               </li>
+               <li class="nav-item">
+                  <a href="#about" class="nav-link">MESSAGE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#author" class="nav-link">ABOUT US</a>
+                  </li>
+                <li class="nav-item">
+                  <a href="#contact" class="nav-link">CONTACT</a>
+                </li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+  
+
+  <!--SHOWCASE-->
+  <section id="showcase" class="py-5">
+    <div class="primary-overlay text-white">
+        <img src="../static/img/schl.jpeg" alt="mlrpschool" class="img-fluid no-repeat" width="100%" height="auto">
+    </div>
+  </section>
+
+  <section id="notice" class="py-5 text-center bg-light">
+    <div class="container">
+          <div class="info-header">
+            <h1 class="text-primary ">
+              NOTICE
+            </h1>
+      </div>
+    </div>
+  </section>
+
+  
+  <!--sdfsdfdsf-->
+ 
+
+
+  <section id="boxes" class="py-5">
+    <div class="container">
+      <div class="row">
+        {% for notice in notices %}
+        <div class="col md-3">
+          <div class="card text-center border-primary">
+            <div class="card-body">
+              <h3 class="text-primary"><a href="{{ notice.file.url }}" target="_blank">{{ notice.title }}</a></h3>
+              <p class="text-muted">{{ notice.content }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!--ABOUT-->
+
+  <section id="about" class="py-5 text-center bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="info-header mb-5">
+            <h1 class="text-primary pb-3">
+              WHY OUR SCHOOL ?
+            </h1>
+            <p class="lead pb-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat expedita sequi ratione, ipsum autem corporis!
+            </p>
+          </div>
+
+          <!--accordian-->
+
+          <div id="accordion" role="tablist"></div>
+          <div class="card">
+            <div class="card-header" id="heading1">
+              <h5 class="mb-0">
+                <div href="#collapse1" data-toggle="collapse" data-parent="#accordion">
+                  <i class="fa fa-arrow-circle-down"> </i> FOUNDER'S MESSAGE...
+                </div>
+              </h5>
+            </div>
+
+            <div id="colllapse1" class="collapse show">
+              <div class="card-body ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo consequuntur minima enim temporibus quis. Ab voluptates officiis cumque impedit dignissimos esse eius laudantium expedita eveniet numquam dicta repellat voluptas consequuntur tempore, sit molestiae, perspiciatis voluptatibus sint maxime error vel amet aliquam iste quos! Tempora maxime maiores nesciunt sed amet aliquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident consequuntur officia, reiciendis, hic ab ullam ea magnam quisquam dolore repellat aut. Voluptatum, animi ipsum quisquam, doloremque numquam laudantium nisi debitis, recusandae dolores consectetur iusto aspernatur esse. Assumenda voluptatibus natus necessitatibus nam iure quaerat quod in alias, quam, incidunt dolorum saepe.</div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="heading2">
+              <h5 class="mb-0">
+                <div href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+                  <i class="fa fa-arrow-circle-down"> </i> PRINCIPLE'S MESSAGE
+                </div>
+              </h5>
+            </div>
+
+            <div id="colllapse2" class="collapse show">
+              <div class="card-body ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo consequuntur minima enim temporibus quis. Ab voluptates officiis cumque impedit dignissimos esse eius laudantium expedita eveniet numquam dicta repellat voluptas consequuntur tempore, sit molestiae, perspiciatis voluptatibus sint maxime error vel amet aliquam iste quos! Tempora maxime maiores nesciunt sed amet aliquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident consequuntur officia, reiciendis, hic ab ullam ea magnam quisquam dolore repellat aut. Voluptatum, animi ipsum quisquam, doloremque numquam laudantium nisi debitis, recusandae dolores consectetur iusto aspernatur esse. Assumenda voluptatibus natus necessitatibus nam iure quaerat quod in alias, quam, incidunt dolorum saepe.</div>
+
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--authors-->
+  <section id="author" class="my-5 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+            <div class="info-header mb-5">
+                <h1 class="text-primary pb-3">
+                  OUR FACULTY
+                </h1>
+                <p class="lead pb-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat expedita sequi ratione, ipsum autem corporis!
+                </p>
+              </div>
+        </div>
+
+      </div>
+      <div class="row">
+        {% for faculty in faculties %}
+        <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-bory">
+                <img src="{{ faculty.image.url }}" alt="" class="img-fluid rounder-circle w-50 mb-3">
+                <h3>{{ faculty.name }}</h3>
+                <h5 class="text-muted">{{ faculty.designation }}</h5>
+                <p>{{ faculty.description }}</p>
+                <div class="d-flex flex-row justify-content-center">
+                  <div class="p-4">
+                    <a href="{{ faculty.url_Facebook }}" class=""><i class="fa fa-facebook"> </i></a>
+                  </div>
+                  <div class="p-4">
+                      <a href="{{ faculty.url_Twitter }}" class=""><i class="fa fa-twitter"> </i></a>
+                  </div>
+                  <div class="p-4">
+                      <a href="{{ faculty.url_Instagram }}" class=""><i class="fa fa-instagram"> </i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+   <section id="contact" class="bg-light py-5">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-8">
+          <h3>Send us a Message</h3>
+          <p class="lead">Let us know your response!</p>
+          <div class="form" >
+               <form method="POST">
+                 {% csrf_token %}
+                 {% for hidden_field in form.hidden_fields %}
+                 {{ hidden_field }}
+               {% endfor %}
+               
+               {% if form.non_field_errors %}
+                 <div class="alert alert-danger" role="alert">
+                   {% for error in form.non_field_errors %}
+                     {{ error }}
+                   {% endfor %}
+                 </div>
+               {% endif %}
+               
+               {% for field in form.visible_fields %}
+                 <div class="form-group">
+                   {{ field.label_tag }}
+               
+                   {% if form.is_bound %}
+                     {% if field.errors %}
+                       {% render_field field class="form-control is-invalid" %}
+                       {% for error in field.errors %}
+                         <div class="invalid-feedback">
+                           {{ error }}
+                         </div>
+                       {% endfor %}
+                     {% else %}
+                       {% render_field field class="form-control is-valid" %}
+                     {% endif %}
+                   {% else %}
+                     {% render_field field class="form-control" %}
+                   {% endif %}
+               
+                   {% if field.help_text %}
+                     <small class="form-text text-muted">{{ field.help_text }}</small>
+                   {% endif %}
+                 </div>
+               {% endfor %}
+               <center>
+                 
+                <button type="submit" class="ml-auto mr-auto btn btn-danger">Save</button>
+               </center>
+               </form>
+            </div>
+        </div>
+         <div class="col-lg-4 align-self-center">
+          <div id="email" class="container">
+              <h3>Reach Us At :</h3>
+              <div class="form-group">
+                <div class="input-group input-group-lg">
+                  <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                   <span> <h4>  XXXXXXXXXX</h4></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-lg">
+                  <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                  <h5>mlrppublicschool@gmail.com</h5>
+                </div>
+              </div>
+          </div>
+
+         </div>
+       </div>
+     </div>
+   </section>
+
+    <!----------- Footer ------------>
+    
+
+
+
+
+
+
+   <section id="map" class="bg-light py-5">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-6 align-self-center" >
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.6465256135557!2d78.43179681484212!3d25.046067083966634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3979dae0dfd58d53%3A0xf8c1b1e8d0bdc2d5!2sSBI+ATM!5e0!3m2!1sen!2sin!4v1554312906106!5m2!1sen!2sin" width="auto" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+         </div>
+         <div id="addres" class="col-lg-6 align-self-center">
+            <img src="{% static '../static/img/logo.jpg' %}" alt="logo" class="img-fluid" height="100%" width="100%">
+         </div>
+       </div>
+     </div>
+   </section>
+
+   
+
+   <footer class="footer-bs">
+    <div class="row">
+      <div class="col-md-3 footer-brand animated fadeInLeft">
+        <img src="{% static 'img/logo.png' %}" width="50" height="50" alt=""><h3 class="d-inline align-middle">MLRPS</h3>
+            <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
+            <p>© 2014 BS3 UI Kit, All rights reserved</p>
+        </div>
+      <div class="col-md-4 footer-nav animated fadeInUp">
+          <h4>Our School —</h4>
+          <div class="col-md-6">
+                <ul class="pages">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">MESSAGE</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">Advice</a></li>
+                </ul>
+            </div>
+          <div class="col-md-6">
+               
+            </div>
+        </div>
+      <div class="col-md-2 footer-social animated fadeInDown">
+          <h4>Follow Us</h4>
+          <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">RSS</a></li>
+            </ul>
+        </div>
+      <div class="col-md-3 footer-ns animated fadeInRight">
+        <div class="container">
+          <div class="tag">
+            Designed by : hash_flash
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+
+ <script src="{% static 'js/jquery.min.js' %}"></script>
+ <script src="{% static 'js/popper.min.js' %}"></script>
+ <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

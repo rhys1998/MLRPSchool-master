@@ -1,0 +1,20 @@
+web development
+
+python
+-django
+
+javascript
+-react
+
+
+
+database
+mysqli
+
+
+
+cp-> rating increase karni hai bc
+
+codechef==2000 tk kaise bhi
+codeforces==1700
+hackerrank 2200
